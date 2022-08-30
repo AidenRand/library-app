@@ -8,7 +8,21 @@
     <title>The Shelf</title>
 </head>
 <body>
-    
+    <div class="input">
+            <form action='app.js'>
+                <input class="authorInput" type="text">
+                <input class="bookNameInput" type="text">
+                <input class="pagesInput" type="text">
+                <input class="readInput" type="checkbox">
+                <button type="button" class="btn1">Add book</button>
+            </form>
+    </div>
+    <div class="card">
+        <p id="author-name" class="authorName"></p>
+        <p id="book-name" class="bookName"></p>
+        <p id="page-num" class="pagesNum"></p>
+        <p id="read-book" class="readBook"></p>
+    </div>
 </body>
 <script src="app.js"></script>
 </html>
