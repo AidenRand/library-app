@@ -1,38 +1,53 @@
 let authorText = document.getElementById("author-name");
-let bookNameText = document.getElementById("book-name");
+let titleText = document.getElementById("book-name");
 let pagesText = document.getElementById("page-num");
 let readText = document.getElementById("read-book");
-const author = document.querySelector(".authorInput");
-const title = document.querySelector(".bookNameInput");
-const pages = document.querySelector(".pagesInput");
-const read = document.querySelector(".readInput");
+const authorIn = document.querySelector(".authorInput");
+const titleIn = document.querySelector(".bookNameInput");
+const pagesIn = document.querySelector(".pagesInput");
+const readIn = document.querySelector(".readInput");
 const btn1 = document.querySelector(".btn1");
+const main = document.querySelector('.card')
 
-function Book() {
-    this.title = title.value;
-    this.author = author.value;
-    this.pages = pages.value;
-    this.read = read.checked;
+let myLibrary = [];
+
+function Book(title, author, pages, read) {
+    this.title = title;
+    this.author = author;
+    this.pages = pages;
+    this.read = read;
     this.bookInfo = function() {
-        return [title, author, pages, read];
+        return[title, author, pages, read];
     }
 }
 
-let myLibrary = []
-let newBook;
+function userInput() {
+    let title = titleIn.value;
+    let author = authorIn.value;
+    let pages = pagesIn.value;
+    let read = readIn.value;
 
-function addBookToLibrary() {
-    newBook = new Book(title, author, pages, read);
+    let newBook = new Book(title, author, pages, read);
     myLibrary.push(newBook);
-    makeVisual();
-}
-addBookToLibrary();
-
-function makeVisual() {
-    authorText.textContent = myLibrary
 }
 
 
+function displayBook() {
+    for (let i = 0; i < myLibrary.length; i++) {
+        let authorT = myLibrary[i].author;
+        let titleT = myLibrary[i].title;
+        let pagesT = myLibrary[i].pages;
+        
+        let text = document.createElement('p');
+        text.textContent = [authorT, titleT, pagesT];
+        main.appendChild(text);
+    }
+}
 
 
-btn1.addEventListener('click', addBookToLibrary);
+// creates new book constructor
+btn1.addEventListener('click', () => {
+    userInput();
+    displayBook();
+})
+
