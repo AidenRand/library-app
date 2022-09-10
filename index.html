@@ -8,18 +8,27 @@
     <title>The Shelf</title>
 </head>
 <body>
+    <button class="newBookBtn">New Book</button>
     <div class="input">
-            <form action='app.js'>
-                <input class="authorInput" type="text">
-                <input class="bookNameInput" type="text">
-                <input class="pagesInput" type="text">
-                <input class="readInput" type="checkbox">
+                <div>
+                    <label for="authorInput">Author</label>
+                    <input class="authorInput" type="text">
+                </div>
+                <div>
+                    <label for="bookNameInput">Title</label>
+                    <input class="bookNameInput" type="text">
+                </div>
+                <div>
+                    <label for="pagesInput">Number of pages</label>
+                    <input class="pagesInput" type="number" min="0">
+                </div>
                 <button type="button" class="btn1">Add book</button>
-            </form>
     </div>
-    <div class="bookContainer">
+
+    <div class="container">
+        <div class="bookContainer">
+        </div>
     </div>
-    <div class="readContainer"></div>
     
 </body>
 <script src="app.js"></script>
