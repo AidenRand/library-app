@@ -7,11 +7,15 @@ body {
     background-color: #1e1e1e;
 }
 
+.header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .newBookBtn {
     display: flex;
     font-size: 2.5rem;
-    margin-left: auto;
-    margin-right: auto;
     margin-top: 50px;
     margin-bottom: 50px;
     padding: 20px;
@@ -20,6 +24,16 @@ body {
     cursor: pointer;
     background-color: rgb(226, 226, 226);
     color: #1e1e1e;
+    position: relative;
+    left: 99px;
+}
+
+.bookCounter {
+  margin-left: 100px;
+  font-size: 2.5rem;
+  color: white;
+  position: relative;
+  left: 70px;
 }
 
 .input {
@@ -35,6 +49,8 @@ body {
   border-radius: 20px;
   font-size: 2rem;
   background-color: grey;
+  opacity: 0;
+  pointer-events: none;
 }
 
 .input > div > label {
@@ -43,11 +59,24 @@ body {
 }
 
 .input > div > input {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     justify-content: center;
     border-radius: 10px;
     border: 0px;
     margin-top: 5px;
+    padding: 10px;
+    height: 15px;
+}
+
+.bottomDiv {
+  margin-left: auto;
+  margin-right: auto;
+  gap: 10px;
+}
+
+.readBtn {
+  transform: scale(2.5);
+  margin-left: 20px;
 }
 
 .authorInput,
@@ -63,6 +92,7 @@ body {
   margin-left: auto;
   margin-right: auto;
   font-size: 1.5rem;
+  cursor: pointer;
 }
 
 .bookContainer {
@@ -74,20 +104,50 @@ body {
   display: grid;
   grid-template-columns: repeat(6, 200px);
   grid-template-rows: repeat(6, 1fr);
-  gap: 40px;
+  gap: 90px;
   justify-self: center;
+  margin-right: 50px;
 }
 
 .bookDiv {
-  display: grid;
-  border: 1px solid black;
-  width: 200px;
-  font-size: 2rem;
-  justify-content: center;
-  height: 200px;
+  display: flex;
+  flex-direction: column-reverse;
+  width: 250px;
+  font-size: 1.5rem;
+  height: 300px;
   border-radius: 10px;
   align-items: center;
-  padding: 10px;
   color: #1e1e1e;
   background-color: rgb(228, 228, 228);
+  gap: 30px;
+}
+
+.closeBtn {
+font-size: 1.5rem;
+margin-top: -20px;
+margin-bottom: 20px;
+cursor: pointer;
+
+}
+
+.title {
+font-weight: 900;
+}
+
+.pages {
+  display: flex;
+  justify-content: center;
+}
+
+.author {
+  display: flex;
+  justify-content: center;
+}
+
+.readButton {
+  display: flex;
+  justify-content: center;
+  font-size: 1.5rem;
+  cursor: pointer;
+  background-color: #F44A26;
 }
