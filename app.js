@@ -1,7 +1,7 @@
 const authorIn = document.querySelector(".authorInput");
 const titleIn = document.querySelector(".bookNameInput");
 const pagesIn = document.querySelector(".pagesInput");
-const readBtn = document.querySelector(".readBtn");
+let readBtn = document.querySelector(".readBtn");
 const btn1 = document.querySelector(".btn1");
 let bookContainer = document.querySelector(".bookContainer");
 let inputContainer = document.querySelector(".input");
@@ -63,24 +63,24 @@ function displayBooks() {
     bookContainer.appendChild(bookDiv);
 
     readButton.addEventListener("click", () => {
-      if (readButton.textContent === 'Read') {
+      if (readButton.textContent === "Read") {
+        myLibrary[i].read = false;
         readButton.style.backgroundColor = "#F44A26";
-        readButton.innerHTML = "Not Read";
+        readButton.textContent = "Not Read";
       } else {
-        readButton.innerHTML = "Read";
+        readButton.textContent = "Read";
         readButton.style.backgroundColor = "#54B82B";
+        myLibrary[i].read = true;
       }
-    })
+    });
 
-    if (readT) {
-      readButton.innerHTML = "Read";
+    if (myLibrary[i].read) {
+      readButton.textContent = "Read";
       readButton.style.backgroundColor = "#54B82B";
     } else {
       readButton.style.backgroundColor = "#F44A26";
-      readButton.innerHTML = "Not Read";
+      readButton.textContent = "Not Read";
     }
-
-    closeBtn.addEventListener("click", () => {});
   }
 }
 
@@ -90,7 +90,7 @@ function resetForm() {
   pagesIn.value = "";
 }
 
-
+// Update book counter
 function updateBookCounter() {
   bookCounter.textContent = `Books: ${myLibrary.length}`;
 }
