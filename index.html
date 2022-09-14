@@ -11,13 +11,19 @@
       crossorigin="anonymous"
       referrerpolicy="no-referrer"
     />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap"
+      rel="stylesheet"
+    />
     <link rel="stylesheet" href="style.css" />
     <title>The Shelf</title>
   </head>
   <body>
     <div class="header">
-      <button class="newBookBtn">New Book</button>
       <p class="bookCounter">Books:</p>
+      <button class="newBookBtn"><i class="fa-solid fa-plus"></i></button>
     </div>
     <form>
       <div class="input">
@@ -33,10 +39,10 @@
           <label for="pagesInput">Number of pages</label>
           <input class="pagesInput" type="number" min="0" />
         </div>
-        <div class="bottomDiv" >
+        <div class="bottomDiv">
           <button type="button" class="btn1">Add book</button>
-          <input type="checkbox" class="readBtn">
-      </div>
+          <input type="checkbox" class="readBtn" />
+        </div>
       </div>
     </form>
 
