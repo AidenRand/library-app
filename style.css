@@ -12,6 +12,17 @@ body {
     font-family: 'Roboto', sans-serif;
 }
 
+body::-webkit-scrollbar {
+  width: 10px;
+}
+body::-webkit-scrollbar-track {
+  background-color: #cfcfcf;
+}
+body::-webkit-scrollbar-thumb {
+  background-color: rgb(48, 48, 48) ;
+  border: 3px solid var(--scrollbarBG);
+}
+
 .header {
   display: flex;
   justify-content: flex-end;
@@ -184,4 +195,9 @@ justify-self: center;
   justify-self: center;
   border-radius: 5px;
   border: none;
+  transition: .2s ease;
+}
+
+.readButton:hover {
+  opacity: .8;
 }

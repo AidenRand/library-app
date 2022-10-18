@@ -1,0 +1,23 @@
+{
+  "name": "library-app",
+  "version": "1.0.0",
+  "description": "Library app using JavaScript | 11:21am | 8-26-2022",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Cortrax/library-app.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Cortrax/library-app/issues"
+  },
+  "homepage": "https://github.com/Cortrax/library-app#readme",
+  "devDependencies": {
+    "eslint": "^8.25.0"
+  }
+}

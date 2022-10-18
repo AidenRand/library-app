@@ -7,7 +7,6 @@ let bookContainer = document.querySelector(".bookContainer");
 let inputContainer = document.querySelector(".input");
 let newBookBtn = document.querySelector(".newBookBtn");
 let bookCounter = document.querySelector(".bookCounter");
-let deleteBtn = document.getElementById("closeBtn");
 
 let myLibrary = [];
 
@@ -116,6 +115,7 @@ btn1.addEventListener("click", () => {
   updateBookCounter();
   inputContainer.style.opacity = 0;
   inputContainer.style.pointerEvents = "none";
+  readBtn.checked = false;
   storeLocal();
 });
 
